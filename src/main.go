@@ -6,8 +6,8 @@ import (
 )
 
 func main(){
-	fmt.Println("123")
+	fmt.Println("main func start")
 
-	array:=[]int {1,2,3,4,5}
+	array:=[]int {32,44,11}
 	peter_sort.LoopSort(array)
 }
