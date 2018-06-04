@@ -2,12 +2,15 @@ package main
 
 import (
 	"fmt"
-	"peter_sort"
+	"PkgSort"
 )
 
 func main(){
 	fmt.Println("main func start")
 
 	array:=[]int {32,44,11}
-	peter_sort.LoopSort(array)
+
+	PkgSort.InsertionSort(array)
+
+	PkgSort.PrintlnArray(array)
 }
