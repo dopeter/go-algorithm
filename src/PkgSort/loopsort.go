@@ -15,6 +15,6 @@ func LoopSort(array [] int ){
 		ExchangeElem(array,index,minIndex)
 	}
 
-	PrintlnArray(array)
+	//PrintlnArray(array)
 }
 

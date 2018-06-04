@@ -4,8 +4,20 @@ import(
 	"testing"
 )
 
+func buildTestDescArray() []int{
+
+	length:=100000
+	array:=make([]int,length)
+
+	for index:=0;index<length;index++{
+		array[index]=length-index
+	}
+
+	return array
+}
+
 func TestLoopSort(t *testing.T){
-	array:=[]int{3,2,1,4}
+	array:=buildTestDescArray()
 
 	LoopSort(array)
 
@@ -15,11 +27,23 @@ func TestLoopSort(t *testing.T){
 }
 
 func TestInsertionSort(t *testing.T){
-	array:=[]int{3,2,1,4,6,6}
+	array:=buildTestDescArray()
 
 	InsertionSort(array)
 
-	PrintlnArray(array)
+	//PrintlnArray(array)
+
+	if CheckLessSortCompleted(array) ==false{
+		t.Error("Sort failed.")
+	}
+}
+
+func TestShellSort(t *testing.T){
+	array:=buildTestDescArray()
+
+	ShellSort(array)
+
+	//PrintlnArray(array)
 
 	if CheckLessSortCompleted(array) ==false{
 		t.Error("Sort failed.")
