@@ -2,11 +2,12 @@ package PkgSort
 
 import(
 	"testing"
+	"fmt"
 )
 
 func buildTestDescArray() []int{
 
-	length:=100000
+	length:=10000000
 	array:=make([]int,length)
 
 	for index:=0;index<length;index++{
@@ -39,6 +40,13 @@ func TestInsertionSort(t *testing.T){
 }
 
 func TestShellSort(t *testing.T){
+
+	// this is test that if condition is false , the loop is which continue to increase.
+	for loop:=0;loop<100&&loop%2==0;loop++{
+		fmt.Println(loop)
+	}
+
+
 	array:=buildTestDescArray()
 
 	ShellSort(array)
