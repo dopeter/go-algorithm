@@ -7,7 +7,7 @@ import(
 
 func buildTestDescArray() []int{
 
-	length:=10000000
+	length:=10000
 	array:=make([]int,length)
 
 	for index:=0;index<length;index++{
