@@ -38,3 +38,14 @@ func ExchangeElem(array []int ,index1 int,index2 int){
 	array[index1]=array[index2]
 	array[index2]=temp
 }
+
+func Min(a int,b int) (int,error){
+	if a<b{
+		return a,nil
+	}else if b<a{
+		return b,nil
+	}else{
+		return a,nil
+		//return -1,errors.New("the nums are equal.")
+	}
+}

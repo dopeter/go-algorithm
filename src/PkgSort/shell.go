@@ -1,9 +1,6 @@
 package PkgSort
 
-import(
-	"fmt"
-)
-
+//ShellSort
 func ShellSort(array []int){
 
 	length:=len(array)
@@ -21,7 +18,7 @@ func ShellSort(array []int){
 		if shellPointIndex<1{
 			break
 		}
-		fmt.Println("Current Loop Shell point:",shellPointIndex)
+		//fmt.Println("Current Loop Shell point:",shellPointIndex)
 		/**
 		Current Loop Shell point: 9841
 		Current Loop Shell point: 3280
