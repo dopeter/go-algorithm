@@ -4,3 +4,4 @@ pkg/
 .vs/
 src/debug
 src/PkgSort/debug.test
+.idea/

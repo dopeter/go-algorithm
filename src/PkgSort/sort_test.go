@@ -90,3 +90,15 @@ func TestMergeSortStartFromBottom(t *testing.T){
 		t.Error("Sort failed.")
 	}
 }
+
+func TestQuickSort(t *testing.T) {
+		array:=[]int{7,6,5,4,4,3}
+
+		//array:=buildTestDescArray()
+		QuickSort(array,0,len(array)-1)
+
+		//PrintlnArray(array)
+	if CheckLessSortCompleted(array) ==false{
+		t.Error("Sort failed.")
+	}
+}
