@@ -2,6 +2,7 @@ package PkgSort
 
 import(
 	"testing"
+	"fmt"
 )
 
 func buildTestDescArray() []int{
@@ -101,4 +102,20 @@ func TestQuickSort(t *testing.T) {
 	if CheckLessSortCompleted(array) ==false{
 		t.Error("Sort failed.")
 	}
+}
+
+
+func TestStackArray(t *testing.T){
+	//array:=[]int{7,6,5,4,4,3}
+
+	stackArray:=NewStackArray(1)
+
+	for loop:=1;loop<11;loop++{
+		stackArray.InsertElem(loop)
+	}
+	stackArray.InsertElem(11)
+
+	maxVal:=stackArray.RemoveMax()
+
+	fmt.Println("max value:",maxVal)
 }

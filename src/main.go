@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"PkgSort"
+"fmt"
+"PkgSort"
 )
 
 func main(){
