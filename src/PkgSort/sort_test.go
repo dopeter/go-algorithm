@@ -7,7 +7,7 @@ import(
 
 func buildTestDescArray() []int{
 
-	length:=100000
+	length:=10000000
 	array:=make([]int,length)
 
 	for index:=0;index<length;index++{
@@ -118,4 +118,19 @@ func TestStackArray(t *testing.T){
 	maxVal:=stackArray.RemoveMax()
 
 	fmt.Println("max value:",maxVal)
+}
+
+func TestStackSort(t *testing.T) {
+
+	//array:=[]int{0,7,4,3,2}
+	array:=buildTestDescArray()
+
+	stackSort:=NewStackSort(array)
+
+	stackSort.Sort()
+
+	if CheckStackLessSortCompleted(array) ==false{
+		t.Error("Sort failed.")
+	}
+
 }

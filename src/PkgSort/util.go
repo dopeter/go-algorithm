@@ -33,6 +33,21 @@ func CheckLessSortCompleted(array []int) bool{
 	return true
 }
 
+func CheckStackLessSortCompleted(array []int) bool{
+
+	for index,val:=range array{
+		if index==0{
+			continue
+		}
+
+		if index<len(array)-1 && val>array[index+1]{
+			return false
+		}
+	}
+
+	return true
+}
+
 func ExchangeElem(array []int ,index1 int,index2 int){
 	temp:=array[index1]
 	array[index1]=array[index2]
